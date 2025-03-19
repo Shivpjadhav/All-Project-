@@ -1,0 +1,242 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Color Picker with Spinning Buttons</title>
+    <style>
+        body {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+            background: #4e3333;
+            margin: 0;
+            overflow: hidden;
+        }
+
+        /* Spinner Animation */
+        .sppiner {
+            /* background: #fc1f1f; */
+            width: 100%;
+            height: 300px;
+            border-radius: 50%;
+            position: relative;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation: spin 5s  ; */
+        }
+        .sppiner2 {
+            /* background: #fc1f1f; */
+            width: 100%;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 5px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation: spin 5s linear infinite; */
+        }
+        .sppiner3 {
+            /* background: #fc1f1f; */
+            width: 100%;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 110px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation: spin 5s linear infinite; */
+        }
+        .sppiner4 {
+            /* background: #fc1f1f; */
+            width: 100%;
+            height: 300px;
+            border-radius: 50%;
+            position: absolute;
+            top: 50px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            /* animation: spin 5s linear infinite; */
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(360deg); }
+        }
+
+        /* Button Styling */
+        .btn {
+            width: 50px;
+            height: 50px;
+            position: absolute;
+            border-radius: 50%;
+            border: 2px solid white;
+            cursor: pointer;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.2);
+            animation: bounce 1s infinite ease-in-out alternate;
+            transition: transform 0.2s ease, box-shadow 0.2s ease;
+        }
+
+        .btn:hover {
+            transform: scale(1.2);
+            box-shadow: 0px 6px 10px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Bouncing Animation */
+        @keyframes bounce {
+            0% { transform: rotate(0deg); }
+            0% { transform: rotate(20deg); }
+            100% { transform: rotate(40deg); }
+        }
+
+        /* Position buttons around the circle */
+        .btn:nth-child(1) { background: white; left: 5px; transform: translateX(-50%); }
+        .btn:nth-child(2) { background: green;  left: 5%; transform: translate(-50%, -50%); }
+        .btn:nth-child(3) { background: pink;  left: 10%; transform: translate(-50%, -50%); }
+        .btn:nth-child(4) { background: yellow; left: 10%; left: 50%; transform: translateX(-50%); }
+        .btn:nth-child(5) { background: purple;  left: 15%; transform: translate(-50%, -50%); }
+        .btn:nth-child(6) { background: orange;  left: 20%; transform: translateX(-50%); }
+        .btn:nth-child(7) { background: black;  left: 25%; transform: translate(-50%, -50%); }
+        .btn:nth-child(8) { background: aqua;  left: 30%; transform: translate(-50%, -50%); }
+        .btn:nth-child(9) { background: red;  left: 35%; transform: translate(-50%, -50%); }
+        .btn:nth-child(10) { background: blue; left: 40%; transform: translate(-50%, -50%); }
+        .btn:nth-child(11) { background: brown; left: 45%; transform: translate(-50%, -50%); }
+        .btn:nth-child(12) { background: gray;  left: 55%; transform: translate(-50%, -50%); }
+        .btn:nth-child(13) { background: maroon;  left: 60%; transform: translate(-50%, -50%); }
+        .btn:nth-child(14) { background: gold;  left: 65%; transform: translate(-50%, -50%); }
+        .btn:nth-child(15) { background: lime;  left: 70%; transform: translate(-50%, -50%); }
+        .btn:nth-child(16) { background: navy;  left: 75%; transform: translate(-50%, -50%); }
+        .btn:nth-child(17) { background: violet;  left: 80%; transform: translate(-50%, -50%); }
+        .btn:nth-child(18) { background: chocolate;  left: 85%; transform: translate(-50%, -50%); }
+        .btn:nth-child(19) { background: silver;  left:90%; transform: translate(-50%, -50%); }
+        .btn:nth-child(20) { background: teal;  left: 100%; transform: translate(-50%, -50%); }
+
+        /* Color Box */
+        .cb {
+            width: 150px;
+            height: 150px;
+            border-radius: 50%;
+            background: #d1c5c5;
+            text-align: center;
+            display: flex;
+            font-size: 20px;
+            justify-content: center;
+            align-items: center;
+            position: absolute;
+            top: 500px;
+            color: white;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sppiner">
+        <div class="btn" data-color="white"></div>
+        <div class="btn" data-color="green"></div>
+        <div class="btn" data-color="pink"></div>
+        <div class="btn" data-color="yellow"></div>
+        <div class="btn" data-color="purple"></div>
+        <div class="btn" data-color="orange"></div>
+        <div class="btn" data-color="black"></div>
+        <div class="btn" data-color="aqua"></div>
+        <div class="btn" data-color="red"></div>
+        <div class="btn" data-color="blue"></div>
+        <div class="btn" data-color="brown"></div>
+        <div class="btn" data-color="gray"></div>
+        <div class="btn" data-color="maroon"></div>
+        <div class="btn" data-color="gold"></div>
+        <div class="btn" data-color="lime"></div>
+        <div class="btn" data-color="navy"></div>
+        <div class="btn" data-color="violet"></div>
+        <div class="btn" data-color="chocolate"></div>
+        <div class="btn" data-color="silver"></div>
+        <div class="btn" data-color="teal"></div>
+    </div>
+    <!-- <div class="sppiner2">
+        <div class="btn" data-color="green"></div>
+        <div class="btn" data-color="yellow"></div>
+        <div class="btn" data-color="orange"></div>
+        <div class="btn" data-color="white"></div>
+        <div class="btn" data-color="pink"></div>
+        <div class="btn" data-color="aqua"></div>
+        <div class="btn" data-color="purple"></div>
+        <div class="btn" data-color="blue"></div>
+        <div class="btn" data-color="black"></div>
+        <div class="btn" data-color="red"></div>
+        <div class="btn" data-color="maroon"></div>
+        <div class="btn" data-color="brown"></div>
+        <div class="btn" data-color="gray"></div>
+        <div class="btn" data-color="gold"></div>
+        <div class="btn" data-color="lime"></div>
+        <div class="btn" data-color="navy"></div>
+        <div class="btn" data-color="violet"></div>
+        <div class="btn" data-color="chocolate"></div>
+        <div class="btn" data-color="silver"></div>
+        <div class="btn" data-color="teal"></div>
+    </div>
+    <div class="sppiner3">
+        <div class="btn" data-color="green"></div>
+        <div class="btn" data-color="yellow"></div>
+        <div class="btn" data-color="orange"></div>
+        <div class="btn" data-color="white"></div>
+        <div class="btn" data-color="pink"></div>
+        <div class="btn" data-color="aqua"></div>
+        <div class="btn" data-color="purple"></div>
+        <div class="btn" data-color="blue"></div>
+        <div class="btn" data-color="black"></div>
+        <div class="btn" data-color="red"></div>
+        <div class="btn" data-color="maroon"></div>
+        <div class="btn" data-color="brown"></div>
+        <div class="btn" data-color="gray"></div>
+        <div class="btn" data-color="gold"></div>
+        <div class="btn" data-color="lime"></div>
+        <div class="btn" data-color="navy"></div>
+        <div class="btn" data-color="violet"></div>
+        <div class="btn" data-color="chocolate"></div>
+        <div class="btn" data-color="silver"></div>
+        <div class="btn" data-color="teal"></div>
+    </div>
+    <div class="sppiner4">
+        <div class="btn" data-color="green"></div>
+        <div class="btn" data-color="yellow"></div>
+        <div class="btn" data-color="orange"></div>
+        <div class="btn" data-color="white"></div>
+        <div class="btn" data-color="pink"></div>
+        <div class="btn" data-color="aqua"></div>
+        <div class="btn" data-color="purple"></div>
+        <div class="btn" data-color="blue"></div>
+        <div class="btn" data-color="black"></div>
+        <div class="btn" data-color="red"></div>
+        <div class="btn" data-color="maroon"></div>
+        <div class="btn" data-color="brown"></div>
+        <div class="btn" data-color="gray"></div>
+        <div class="btn" data-color="gold"></div>
+        <div class="btn" data-color="lime"></div>
+        <div class="btn" data-color="navy"></div>
+        <div class="btn" data-color="violet"></div>
+        <div class="btn" data-color="chocolate"></div>
+        <div class="btn" data-color="silver"></div>
+        <div class="btn" data-color="teal"></div>
+    </div> -->
+    <div id="cb" class="cb">Pick a Color</div>
+
+    <script>
+        document.querySelectorAll('.btn').forEach(button => {
+            button.addEventListener('click', function() {
+                let selectedColor = this.getAttribute('data-color');
+                let colorBox = document.getElementById('cb');
+                colorBox.style.background = selectedColor;
+                colorBox.textContent = selectedColor.charAt(0).toUpperCase() + selectedColor.slice(1);
+                colorBox.style.color = (selectedColor === 'black') ? 'white' : 'black'; // Change text color for visibility
+            });
+        });
+    </script>
+
+</body>
+</html>

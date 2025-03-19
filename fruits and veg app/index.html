@@ -1,0 +1,475 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+    <link rel="icons" href="https://fonts.google.com/icons">
+    <link rel="stylesheet" href="style.css">
+    <title>Fruits And Vegetables Website</title>
+    <style>/* General styles (Desktop & Tablets) */
+      body {
+          font-family: Arial, sans-serif;
+      }
+      
+      .card {
+          width: 18rem;
+          margin: 10px;
+      }
+      
+      /* For mobile devices */
+      @media screen and (max-width: 767px) {
+          .card {
+              width: 100%;
+              margin: 10px 0;
+          }
+      
+          .navbar {
+              flex-direction: column;
+          }
+      
+          .serach {
+              width: 100%;
+          }
+      
+          .menu img {
+              width: 100%;
+          }
+      }
+      
+      /* For tablets */
+      @media screen and (min-width: 768px) and (max-width: 1024px) {
+          .card {
+              width: 45%;
+          }
+      
+          .navbar {
+              justify-content: flex-start;
+          }
+      
+          .menu img {
+              width: 100%;
+          }
+      }
+      
+      /* For large screens */
+      @media screen and (min-width: 1025px) {
+          .card {
+              width: 18rem;
+          }
+      
+          .navbar {
+              justify-content: flex-start;
+          }
+      }
+      </style>
+      <style>
+        .h2{
+                            color: rgb(80, 2, 2);
+                            padding: 20px;
+                          }
+                          .input{
+                            width: 300px;
+                            position: relative;
+                            left: 540px;
+                            border-radius: 1px;
+                          }
+                          .cf{
+                  font-size: 15px; 
+                  color: #442b2b; 
+                  padding: 10px;
+                
+                }
+                .g{
+                  border: 1px rgb(163, 162, 162) solid;
+                  padding: 10px;
+
+                }
+                .btnt{
+                   width: 90px;
+                   border-radius: 10px;
+                   background:greenyellow;
+                }
+      </style>
+</head>
+<body>
+    <div class="customers"> 
+      <!-- <img src="icon/icons8-facebook-30.png" alt="" width="100px"> -->
+      for any queries - please contact customers care-000000000</div>
+    <div class="c-2">
+        <a href="" class="logo">
+            <i class="icon">FreshHarvestHub</i>  
+            <input type="search" placeholder="search ..........." class="serach ip">
+            <input type="search" placeholder="All" class="serach  ip-2 btn btn-secondary">
+            <button class="btn btn-success btn2">sea</button> 
+                
+        </a>
+        <!-- <div class="profile" >
+            <img src="images/img.png" >
+         <span>shivani jadhav</span> 
+        </div> -->
+    </div>
+    <header>
+        
+        <div class="bx bxs-menu" id="menu-icon"></div>
+         <ul class="navbar">
+            <li><a href="#home" class="home-active">Home</a></li>
+            <li><a href="#categories">Categories</a></li>
+            <li><a href="#products">Products</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#customers">Customers</a></li>
+            <li><a href="#categories">Categoriese</a></li>
+
+        </ul> 
+       
+    </header>
+        <div class="" id="home" >
+           <div class=" ">
+            <div class="swiper-container">
+                <div class="swiper-wrapper">
+                    <div class="swiper-slide"><img src="img/slider4.png" alt="Image 2">                  </div>
+                    <div class="swiper-slide"><img src="img/slider1.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider2.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider3.jpg" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider4.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider1.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider2.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider3.png" alt="Image 2"></div>
+                    <div class="swiper-slide"><img src="img/slider4.png" alt="Image 2"></div>
+                    <!-- <div class="swiper-slide"><img src="img/slider/slider1.jpeg" alt="Image 2"></div> -->
+
+                </div>
+                <div class="swiper-button-prev">&#10094;</div>
+                <div class="swiper-button-next">&#10095;</div>
+                <div class="swiper-pagination"></div>
+              </div>
+           </div>
+         </div>
+    
+         <div class="row text" id="products">
+          <style>
+            .i{
+              width: 70px;
+
+            }
+          </style>
+            <div class="col-6">
+                <i><img src="img/fresh.png" class="i"></i><br>
+                Freshness Guarantee
+                <div>Form farm to fork</div>
+            </div>
+            <div class="col-6" >
+                <i><img src="img/fast-delivery.png" class="i"></i><br>
+                To your doorstep
+                <div>Instant Delivery</div>
+            </div>
+         </div>
+            
+            <div class="crads" >
+                <div>
+                    <div class="cards-products" >
+                        <div class="heading-text2" id="categories">New & Peak Season Produce <span style="float: right;font-weight: normal;font-size:medium;" class="viewall"> <a href="images/viewallproduct.html">View All </a></span></div>
+                        <div class="imgdiv">
+                            <div class="row" >
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/kiwi.jpg" class="card-img-top imgcard">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Kiwi</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                <!-- </div> -->
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/mango.png" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Mango</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/lychee.jpg" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Lychee</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/oranges.jpg" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Orange</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/apple.jpg" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Apple</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                            
+                            <div class="row" style="display:flex;">
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/cabbage.webp" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Cabbage</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/tomato.jpg" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Tomato</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/brinjal.jpeg" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Brinjal</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/broccoli.avif" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">Broccoli</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                                <div class="col-2">
+                                    <div class="card" style="width: 18rem;">
+                                        <img src="img/buttercrud.webp" class="card-img-top imgcard" alt="...">
+                                        <div class="card-body">
+                                          <h5 class="card-title">ButterCurd</h5>
+                                          400g
+                                          <p class="card-text cr">Rs. 20.00</p>
+                                          <!-- <p class="card-text">Rs. 50.00</p> -->
+                                          <a href="#" class="btn btn-primary btnsn">Shop now</a>
+                                        </div>
+                                      </div>
+                                     
+                                </div>
+                            </div>
+                            
+                    </div>
+                </div>
+            </div>
+                    </div>
+                    <center>
+                    <div class="heading-span text">
+                        <span class="heading">Welcome to Fresh & Natural -</span>
+                        <br>
+                        <span class="heading-text">
+        At Live Organic, we work with local farmers and producers to bring you peak-quality, high-integrity organic fruits and vegetables. Same Day.</span>
+        <br>
+        Your Trusted Source for Farm-Fresh Fruits & Vegetables
+                        At Fresh & Natural, We belive in providing you with the highrst qulity,
+                        locally grown fruits and Vegetables that are as fresh as nature intended.
+                        Our wide selectio of seasonal produce is carefully sourced from trusted farms,
+                        ensuring every bite is packed with flavor, nutrients and goodness.
+                        <br>
+                        <i>hand</i>
+
+                        </div>
+                    </center>
+                    
+
+                     <div class="row menu2" id="about">
+                      <div class="col-6">
+                        
+                        <div class="menu">
+                          <img src="img/fnv.jpg" alt="" height="300px" width="300px">
+                          <p class="textofp">Fruits&Vegetables
+                            <br>
+                            <a href="images/shopnow.html" style="font-size: medium;">Shop Now</a>
+                          </p>
+                          
+                        </div>
+                      </div>
+                      <div class="col-6">
+                       <div class="menu">
+                        <img src="img/grocery.jpg" alt="" height="300px" width="300px">
+                        <p class="textofp">Groceries
+                          <br>
+                          <a href="images/shopnow.html" style="font-size: medium;">Shop Now</a>
+                        </p>
+                      </div>
+                      </div>
+                     </div>
+                     <br>
+                     <div class="row menu2">
+                      <div class="col-6">
+                        
+                        <div class="menu">
+                          <img src="img/our.jpg" alt="" height="300px" width="300px">
+                          <p class="textofp">Our Story
+                            <br>
+                            <a href="images/shopnow.html" style="font-size: medium;">Read More</a>
+                          </p>
+                        </div>
+                      
+                      </div>
+                      <div class="col-6">
+                       <div class="menu">
+                        <img src="img/blog.jpg" alt="" height="300px" width="300px">
+                        <p class="textofp">Our Blog
+                          <br>
+                          <a href="images/shopnow.html" style="font-size: medium;">Read More</a>
+                        </p>
+                      </div>
+                      </div>
+                  </div>
+                </div>         
+              </div>
+              <style>
+                .shop-img{
+                  border-radius: 200px;
+                  width: 250px;
+                  height:250px;
+                  /* padding: 40px; */
+                  position: relative;
+                  top: 10px;
+                  margin: 25px;
+                  /* padding:70px ; */
+                }
+              </style>
+                     <!--review-->
+                 <!--/review-->
+                    <!--shop-->
+                    <div class="shop">
+                      <span style="font-size: 25px;text-align:center;padding-left: 10px;color:#004900c6;">Shop</span>
+                      <ul >
+                        <li><img src="img/fruitndveg.webp" class="shop-img"><a href="fruits&vege.html">Fruits & vegetables</a></li>
+                        <li><img src="img/flour.webp" class="shop-img"><a href="flours.html">Flours</a></li>
+                        <li><img src="img/pulse.webp" class="shop-img"><a href="pulses.html">Pulses</a></li>
+                        <li><img src="img/nuts.webp" class="shop-img"><a href="nuts.html">Nuts</a></li>
+                        <li><img src="img/dairy.jpg" class="shop-img"><a href="dairy.html">Dairy</a></li>
+                        <!-- <li><img src="images/firstslide.png" class="shop-img"></li> -->
+                        
+                      </ul>
+                      <div>
+                        <div class="tp text" style="padding-top:30px;color: rgb(97, 86, 86);background: #ebe0e0;">
+                          <h1>Thank You for Reaching Out!</h1>
+                        
+                       <dir> We’ve received your message and will get back to you as soon as possible. In the meantime, feel free to explore more about us: <br>
+                        If your inquiry is urgent, you can also reach us at [thanks@gmail.com] or call [0000000000].</dir>
+
+                      Looking forward to connecting with you! <br>
+                      <img src="img/signboard.png" class="i">
+                        </div>
+                       <div class="cf">
+                        <div class="g" style="">
+                        <h2 class="h2">Contact Us</h2>
+                        <form>
+                          <div class="form-group">
+                            <!-- <label for="exampleInputEmail1">Email address</label> -->
+                            <input type="email" class="form-control input" id="exampleInputEmail1" aria-describedby="emailHelp" placeholder="Enter email">
+                            <small id="emailHelp" class="form-text text-muted">We'll never share your email with anyone else.</small>
+                          </div>
+                          <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Password</label> -->
+                            <input type="password" class="form-control input" id="exampleInputPassword1" placeholder="Password">
+                          </div>
+                          <div class="form-group">
+                            <!-- <label for="exampleInputPassword1">Password</label> -->
+<textarea name="massege" class="input" style="position: relative;left: 33px;border: #858282;" id="">Message</textarea>                          </div>
+                          
+                          <button type="submit" class="btn btn-success">Submit</button>
+                        </form>
+                      </div>
+  </div>       <!--footer-->
+                     <div class="footer">
+                      <footer>
+                        <p>&copy; 2025 YourCompany. All rights reserved.</p>
+                        <nav>
+                            <a href="/privacy-policy">Privacy Policy</a> | 
+                            <a href="/terms-of-service">Terms of Service</a> | 
+                            <a href="/contact">Contact Us</a>
+                        </nav>
+                    </footer>
+                    
+                    </div>
+                    <!--footer-->
+                </div>
+            </div>
+           
+    
+        
+        <!-- <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.12.9/dist/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.0.0/dist/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script> -->
+          <script src="script.js"></script>
+          <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+          <script>
+            
+
+          var swiper = new Swiper('.swiper-container', {
+            slidesPerView: 1,
+            spaceBetween: 10,
+            navigation: {
+                nextEl: '.swiper-button-next',
+                prevEl: '.swiper-button-prev',
+            },
+            pagination: {
+                el: '.swiper-pagination',
+                clickable: true,
+            },
+        });
+      </script>
+</body>
+</html>

@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Quiz App</title>
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;600&display=swap');
+        
+        body {
+            font-family: 'Poppins', sans-serif;
+            text-align: center;
+            background: #ecebeb;
+            padding: 0;
+            margin: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+        .q{
+            width:800px ;
+        }
+        .quiz-container {
+            background: #ffffff;
+            padding: 20px;
+            border-radius: 15px;
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
+            /* max-width: 360px; */
+            width: 500px;
+            height: 80%;
+            transition: transform 0.3s;
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+        }
+        .quiz-header {
+            font-size: 22px;
+            font-weight: 600;
+            color: #210275;
+            margin-bottom: 15px;
+        }
+        .btn2 {
+            display: block;
+            width: 80%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #090155;
+            color: rgb(247, 245, 245);
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .btn {
+            display: block;
+            width: 80%;
+            padding: 12px;
+            margin: 8px 0;
+            background: #090155;
+            color: white;
+            border: none;
+            cursor: pointer;
+            border-radius: 8px;
+            font-size: 16px;
+            transition: all 0.3s ease-in-out;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.2);
+        }
+        .btn:hover {
+            background: #027a1e;
+            transform: scale(1.05);
+        }
+        .correct {
+            background: #00ee38 !important;
+            animation: correctAnim 0.5s ease-in-out;
+        }
+        .wrong {
+            background: #dd0016 !important;
+            animation: wrongAnim 0.5s ease-in-out;
+        }
+        @keyframes correctAnim {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        @keyframes wrongAnim {
+            0% { transform: scale(1); }
+            50% { transform: scale(0.9); }
+            100% { transform: scale(1); }
+        }
+        #score {
+            font-size: 18px;
+            font-weight: bold;
+            margin-top: 20px;
+            color: #270101;
+        }
+    </style>
+    <style>
+        
+    </style>
+</head>
+<body>
+    <div class="quiz-container q" id="quiz">
+        <h2> Let's Play QUIZ </h2>
+        <h2 class="quiz-header" id="question">Question text</h2>
+        <button class="btn" onclick="selectAnswer(0)" id="btn0">Option 1</button>
+        <button class="btn" onclick="selectAnswer(1)" id="btn1">Option 2</button>
+        <button class="btn" onclick="selectAnswer(2)" id="btn2">Option 3</button>
+        <button class="btn" onclick="selectAnswer(3)" id="btn3">Option 4</button>
+        <button class="btn2" id="score" style="color: white;background: #000;">Score: 0</button>
+        <p ></p>
+    </div>
+    <script>
+        const questions = [
+        { question: "What does HTML stand for?", answers: ["Hyper Text Markup Language", "Hyper Transfer Markup Language", "High-Level Text Management Language", "Hyperlink and Text Management Language"], correct: 0 },
+            { question: "Which CSS property is used to change the text color of an element?", answers: ["font-color", "text-color", "color", "background-color"], correct: 2 },
+{ question: "What is the purpose of JavaScript in web development?", answers: ["Styling web pages", "Structuring web pages", "Making web pages interactive", "Managing databases"], correct: 2 },
+            { question: "Which HTML tag is used to create a hyperlink?", answers: ["<link>", "<a>", "<href>", "<hyperlink>"], correct: 1 },
+            { question: "What does CSS stand for?", answers: ["Computer Style Sheets", "Creative Style Sheets", "Cascading Style Sheets", "Colorful Style Sheets"], correct: 2 },
+            { question: "Which JavaScript function is used to select an HTML element by its ID?", answers: ["getElementByClass()", "querySelector()", "getElementById()", "selectElementByID()"], correct: 2 },
+            { question: "What is the default position of an HTML element?", answers: ["static", "relative", "absolute", "fixed"], correct: 0 },
+            { question: "Which tag is used to create a numbered list in HTML?", answers: ["<ul>", "<ol>", "<li>", "<dl>"], correct: 1 }
+       
+            
+        ];
+        let currentQuestionIndex = 0;
+        let score = 0;
+
+        function loadQuestion() {
+            const q = questions[currentQuestionIndex];
+            document.getElementById("question").innerText = q.question;
+            const buttons = document.querySelectorAll(".btn");
+            buttons.forEach((btn, index) => {
+                btn.innerText = q.answers[index];
+                btn.classList.remove("correct", "wrong");
+                btn.disabled = false;
+            });
+        }
+
+        function selectAnswer(index) {
+            const correctIndex = questions[currentQuestionIndex].correct;
+            document.getElementById(`btn${correctIndex}`).classList.add("correct");
+            if (index === correctIndex) {
+                score++;
+            } else {
+                document.getElementById(`btn${index}`).classList.add("wrong");
+            }
+            document.querySelectorAll(".btn").forEach(btn => btn.disabled = true);
+            setTimeout(() => {
+                currentQuestionIndex++;
+                if (currentQuestionIndex < questions.length) {
+                    loadQuestion();
+                } else {
+                    document.getElementById("quiz").innerHTML = `
+                    <style>div{
+                        padding:10px;color:green;font-family:;}</style>
+                        <div>
+                            <img src="c2.avif" style="width: 500px;height: 80%;">
+                    <h2>Quiz Completed!</h2><p>Final Score: ${score}</p>
+                   </div>
+                    `;
+                } 
+                document.getElementById("score").innerText = `Score: ${score}`;
+            }, 1000);
+        }
+
+        loadQuestion();
+    </script>
+    
+</body>
+</html>
