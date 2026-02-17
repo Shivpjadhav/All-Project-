@@ -1,4 +1,4 @@
- Check Out Second Branch Projects (sec-branch)
+ Check Out Second Branch Projects (my-new-branch)
 
 This branch contains multiple practice and development projects focused on improving backend development, cloud tools, and deployment skills.
 
