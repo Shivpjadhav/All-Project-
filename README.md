@@ -4,7 +4,4 @@ This branch contains multiple practice and development projects focused on impro
 
 The goal of this branch is experimentation, learning, and building small working implementations of different technologies.
 
----
 
-## Branch Name
-sec
